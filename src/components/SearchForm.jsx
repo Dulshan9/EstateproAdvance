@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles.css"; // assuming you have global styles there
+import "../styles.css"; 
 
 export default function SearchForm({ onSearch }) {
   const [form, setForm] = useState({

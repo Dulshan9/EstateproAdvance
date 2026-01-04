@@ -3,9 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/EstateproAdvance/',
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: './vitest.setup.js',  // ← Make sure this path is correct
+    setupFiles: './vitest.setup.js',    
   },
 });

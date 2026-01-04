@@ -36,7 +36,7 @@ function ImageGallery({ images }) {
         
         <div className="main-image-container" onClick={toggleFullscreen}>
           <img 
-            src={`/${images[currentIndex]}`} 
+            src={`${import.meta.env.BASE_URL}${images[currentIndex].replace(/^\/+/, '')}`} 
             alt={`Property view ${currentIndex + 1}`}
             className="main-image"
           />
@@ -70,9 +70,9 @@ function ImageGallery({ images }) {
             onClick={() => selectImage(index)}
           >
             <img 
-              src={`/${image}`} 
-              alt={`Thumbnail ${index + 1}`}
-              className="thumbnail"
+                src={`${import.meta.env.BASE_URL}${image.replace(/^\/+/, '')}`} 
+                alt={`Thumbnail ${index + 1}`}
+                className="thumbnail"
             />
           </div>
         ))}
@@ -82,7 +82,7 @@ function ImageGallery({ images }) {
         <div className="fullscreen-overlay" onClick={toggleFullscreen}>
           <div className="fullscreen-content">
             <img 
-              src={`/${images[currentIndex]}`} 
+              src={`${import.meta.env.BASE_URL}${images[currentIndex].replace(/^\/+/, '')}`} 
               alt="Fullscreen view"
               className="fullscreen-image"
             />

@@ -17,7 +17,7 @@ function PropertyCard({ property, onAddToFavourites, isFavourite }) {
     <div className="property-card">
       <div className="property-image">
         <img
-          src={`/${property.picture}`}
+          src={`${import.meta.env.BASE_URL}${property.picture.replace(/^\/+/, '')}`}
           alt={`${property.type} in ${property.location}`}
         />
         <div className="property-badge">

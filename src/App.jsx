@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
 import SearchPage from './pages/SearchPage';
 import PropertyPage from './pages/PropertyPage';
